@@ -1,8 +1,7 @@
-from flask import Blueprint
+from application.auth import auth
+from flask import render_template
 
-auth = Blueprint('auth', __name__)
 
-
-@auth.route('/auth')
-def hello_world() -> str:
-    return 'Hello, Auth Blueprint!'
+@auth.route('/')
+def hello_world():
+    return render_template('auth.html')

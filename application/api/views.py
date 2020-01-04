@@ -1,8 +1,6 @@
-from flask import Blueprint
-
-api = Blueprint('api', __name__)
+from application.api import api
 
 
-@api.route('/api')
-def hello_world() -> dict:
-    return {'Hello': ', API Blueprint!'}
+@api.route('/')
+def hello_world():
+    return {'Hello': 'api'}
