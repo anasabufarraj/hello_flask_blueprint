@@ -1,6 +1,6 @@
 from flask import Flask
-from application.api.views import api
-from application.auth.views import auth
+from application.api import api, views
+from application.auth import auth, views
 
 app = Flask(__name__)
 
